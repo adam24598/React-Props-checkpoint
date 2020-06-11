@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
+import Profilecomponent from './profile/Profilecomponent'
+import Picture from './profile/photo.png';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  
+  
+    <Profilecomponent />,
+  
   document.getElementById('root')
 );
 
