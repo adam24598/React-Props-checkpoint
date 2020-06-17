@@ -1,6 +1,6 @@
 import React from 'react'
-import Picture from './profile/photo.png';
-import ChildComponent from "./profile/childComponent";
+import Picture from './photo.png';
+import ChildComponent from "./childComponent";
 function Profilecomponent() {
     const handleName=()=>{
         alert(this.props.fullName)
@@ -8,13 +8,16 @@ function Profilecomponent() {
 
     return (
         <div className="profilecomponent">
+         <handleName/>
          <ChildComponent
          fullName="Adam Ben Slama"
          bio="etc etc etc"
          profession="etudiant"
-         ></ChildComponent>
-                         <Picture key={picture.id} src={picture.src}>
-</Picture>
+         >
+              <img key={Picture.id} alt="erreur" src={Picture.src}/>
+
+         </ChildComponent>
+                        
         </div>
     )
 }

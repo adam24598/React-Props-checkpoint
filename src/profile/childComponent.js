@@ -1,32 +1,34 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
 function childComponent(props) {
     const {
         fullName,
         profession,
         bio,
-        handleName 
+        handleName,
+        handleAlert
           } = props;
 
     return (
         <div className="childComponent">
-            {props.handleName() }
-            <h1>props.fullName</h1>
-            <h2>props.profession</h2>
-            <h3>props.bio</h3>
-            
+            {handleName() }
+            <h1>{fullName}</h1>
+            <h2>{profession}</h2>
+            <h3>{bio}</h3>
+            <button onClick={() => handleAlert()}>Click Here</button>
         </div>
     )
 }
-ChildComponent.defaultProps = {
+childComponent.defaultProps = {
     fullName: "no name",
     bio: "no bio",
     profession:"no profession"
   };
-  ChildComponent.propTypes = {
-     fullName:propTypes.string,
-     profession:propTypes.string,
-     bio:propTypes.string,
+  childComponent.propTypes = {
+     fullName:PropTypes.string,
+     profession:PropTypes.string,
+     bio:PropTypes.string,
 
 };
 export default childComponent
