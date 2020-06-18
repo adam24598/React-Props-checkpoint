@@ -6,17 +6,20 @@ function childComponent(props) {
         fullName,
         profession,
         bio,
-        handleName,
-        handleAlert
-          } = props;
+        
+        
+    } = props;
+    const handleName=()=>{
+        alert(fullName);
+    }        
 
     return (
         <div className="childComponent">
-            {handleName() }
+            
             <h1>{fullName}</h1>
             <h2>{profession}</h2>
             <h3>{bio}</h3>
-            <button onClick={() => handleAlert()}>Click Here</button>
+            <button onClick={handleName}>Click Here</button>
         </div>
     )
 }

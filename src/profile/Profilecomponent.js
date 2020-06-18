@@ -3,16 +3,17 @@ import Picture from './photo.png';
 import ChildComponent from "./childComponent";
 function Profilecomponent() {
     const handleName=()=>{
-        alert(this.props.fullName)
+        alert("adf")
     }        
 
     return (
         <div className="profilecomponent">
-         <handleName/>
+         
          <ChildComponent
          fullName="Adam Ben Slama"
          bio="etc etc etc"
          profession="etudiant"
+         handleName={handleName}
          >
               <img key={Picture.id} alt="erreur" src={Picture.src}/>
 
